@@ -1,4 +1,4 @@
-\documentclass[a4paper,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %----------------------------------------------------------------------------------------
 % PACKAGES
@@ -7,30 +7,36 @@
 \usepackage{parskip} 	
 \RequirePackage{color}
 \RequirePackage{graphicx}
-\usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage{xcolor}
+\usepackage[scale=0.92]{geometry} % slightly smaller margins
 \usepackage{tabularx}
 \usepackage{enumitem}
-\usepackage{supertabular}
-\usepackage{titlesec}
 \usepackage{multicol}
-\usepackage{multirow}
-\usepackage[unicode, draft=false]{hyperref}
-\definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{titlesec}
+\usepackage{hyperref}
 \usepackage{fontawesome5}
 
-% custom section
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+%----------------------------------------------------------------------------------------
+% COLORS & LINKS
+%----------------------------------------------------------------------------------------
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
 
-% job listing environment
+%----------------------------------------------------------------------------------------
+% SECTION FORMATTING
+%----------------------------------------------------------------------------------------
+\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{4pt} % reduce spacing before/after sections
+
+%----------------------------------------------------------------------------------------
+% JOB LISTING ENVIRONMENT
+%----------------------------------------------------------------------------------------
 \newenvironment{joblong}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-        \textbf{#1} & \hfill &  #2 \\[3.75pt]
+        \textbf{#1} & \hfill &  #2 \\
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]%
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]%
 }{%
     \end{itemize}
     \end{minipage}
@@ -46,20 +52,17 @@
 % HEADER
 %----------------------------------------------------------------------------------------
 \begin{center}
-    {\Huge \textbf{Aayush Wadhwa}} \\[5pt]
-    Chandigarh, India 160014
-\end{center}
-
-\begin{center}
-    \href{mailto:aayuwadhwa@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ 
-    \href{tel:+919517087038}{\raisebox{-0.05\height}\faMobile\ +91-9517087038}
+    {\Huge \textbf{Aayush Wadhwa}} \\[4pt]
+    Chandigarh, India 160014 \\
+    \href{mailto:aayuwadhwa@gmail.com}{\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ \,
+    \href{tel:+919517087038}{\faMobile\ +91-9517087038} \\
 \end{center}
 
 %----------------------------------------------------------------------------------------
 % SUMMARY
 %----------------------------------------------------------------------------------------
 \section{Summary}
-\textbf{EDI Developer} with strong expertise in healthcare EDI transactions including 837 (Professional, Institutional, Dental), 835, 999, and 277. Proficient in EDI mapping, transformation, and validation across X12, XML, CSV, and JSON formats. Skilled in Edifecs tools (XEServer, SpecBuilder, MapBuilder) with experience in product upgrades, deployments, and production support. Proven ability to collaborate with clients to deliver HIPAA-compliant, accurate, and efficient EDI solutions.
+EDI Developer with strong expertise in healthcare EDI transactions including 837 (Professional, Institutional, Dental), 835, 999, and 277. Proficient in EDI mapping, transformation, and validation across X12, XML, CSV, and JSON formats. Skilled in Edifecs tools (XEServer, SpecBuilder, MapBuilder) with experience in product upgrades, deployments, and production support. Proven ability to collaborate with clients to deliver HIPAA-compliant, accurate, and efficient EDI solutions.
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE
@@ -89,29 +92,30 @@
 % CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 \section{Certifications}
-\begin{tabularx}{\linewidth}{@{}X X@{}}
-\begin{itemize}[leftmargin=1em]
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=1em,itemsep=2pt]
     \item US Healthcare
     \item EDI Fundamentals
     \item XEServer Fundamentals
-\end{itemize} &
-\begin{itemize}[leftmargin=1em]
     \item SpecBuilder Certified Associate
     \item XEngine Certified Associate
     \item Python
 \end{itemize}
-\end{tabularx}
+\end{multicols}
 
 %----------------------------------------------------------------------------------------
 % SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-EDI & EDI Transactions (837, 835, 999, 277), EDIFACT, HIPAA Compliance \\
+EDI & 837, 835, 999, 277, EDIFACT, HIPAA Compliance \\
 EDI Tools & XEServer, SpecBuilder, MapBuilder \\
 Programming & Groovy, Python, XML, CSV, JSON \\
 Web Servers & Tomcat \\
 Business Analysis & Business Process Analysis, Client Collaboration \\
 \end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
 
 \end{document}
