@@ -7,40 +7,36 @@
 \usepackage{parskip} 	
 \RequirePackage{color}
 \RequirePackage{graphicx}
-\usepackage{xcolor}
-\usepackage[scale=0.94]{geometry} % slightly tighter margins
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
 \usepackage{tabularx}
 \usepackage{enumitem}
-\usepackage{multicol}
+\usepackage{supertabular}
 \usepackage{titlesec}
-\usepackage{hyperref}
-\usepackage{fontawesome5}
-
-%----------------------------------------------------------------------------------------
-% COLORS & LINKS
-%----------------------------------------------------------------------------------------
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[unicode, draft=false]{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\usepackage{fontawesome5}
 
-%----------------------------------------------------------------------------------------
-% SECTION FORMATTING
-%----------------------------------------------------------------------------------------
-\titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{7pt}{10pt} % extra space after section headlines
+% custom section
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{8pt}{4pt}  % Reduced spacing after headlines
 
-%----------------------------------------------------------------------------------------
-% JOB LISTING ENVIRONMENT
-%----------------------------------------------------------------------------------------
-\newenvironment{joblong}[2]{%
+% job listing environment
+\newenvironment{joblong}[2]
+    {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-        \textbf{#1} & \hfill &  #2 \\
+    \textbf{#1} & \hfill &  #2 \\[3pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]%
-}{%
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]
+    }
+    {
     \end{itemize}
-    \end{minipage}
-}
+    \end{minipage}    
+    }
 
 %----------------------------------------------------------------------------------------
 % BEGIN DOCUMENT
@@ -51,12 +47,11 @@
 %----------------------------------------------------------------------------------------
 % HEADER
 %----------------------------------------------------------------------------------------
-\begin{center}
-    {\Huge \textbf{Aayush Wadhwa}} \\[5pt]
-    Chandigarh, India 160014 \\
-    \href{mailto:aayuwadhwa@gmail.com}{\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ \,
-    \href{tel:+919517087038}{\faMobile\ +91-9517087038} \\
-\end{center}
+\begin{tabularx}{\linewidth}{@{}X r@{} }
+\Huge{Aayush Wadhwa} & Chandigarh, India 160014 \\
+\href{mailto:aayuwadhwa@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ 
+\href{tel:+919517087038}{\raisebox{-0.05\height}\faMobile\ +91-9517087038} & \\
+\end{tabularx}
 
 %----------------------------------------------------------------------------------------
 % SUMMARY
@@ -77,6 +72,8 @@ EDI Developer with strong expertise in healthcare EDI transactions including 837
     \item Created and maintained detailed documentation of mapping logic, workflows, and transaction processing for clear communication with stakeholders.
     \item Executed upgrades of Edifecs products, ensuring seamless integration, stability, and compliance with system requirements.
     \item Managed installation, upgrades, and deployments while providing technical direction to network engineers and production support teams.
+    \item Monitored and resolved production issues for EDI transactions, ensuring minimal downtime and compliance with HIPAA and payer requirements.
+    \item Provided timely troubleshooting and root cause analysis for 837, 835, 999, and 277 transactions, reducing recurring errors and improving operational efficiency.
 \end{joblong}
 
 %----------------------------------------------------------------------------------------
@@ -93,7 +90,7 @@ EDI Developer with strong expertise in healthcare EDI transactions including 837
 %----------------------------------------------------------------------------------------
 \section{Certifications}
 \begin{multicols}{2}
-\begin{itemize}[leftmargin=1em,itemsep=2pt]
+\begin{itemize}[leftmargin=1em]
     \item US Healthcare
     \item EDI Fundamentals
     \item XEServer Fundamentals
@@ -108,7 +105,7 @@ EDI Developer with strong expertise in healthcare EDI transactions including 837
 %----------------------------------------------------------------------------------------
 \section{Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-EDI & 837, 835, 999, 277, EDIFACT, HIPAA Compliance \\
+EDI & EDI Transactions (837, 835, 999, 277), EDIFACT, HIPAA Compliance \\
 EDI Tools & XEServer, SpecBuilder, MapBuilder \\
 Programming & Groovy, Python, XML, CSV, JSON \\
 Web Servers & Tomcat \\
