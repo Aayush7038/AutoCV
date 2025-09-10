@@ -24,15 +24,77 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-% job listing environments
-\newenvironment{joblong}[2]
-    {
+% job listing environment (fixed)
+\newenvironment{joblong}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+        \textbf{#1} & \hfill &  #2 \\[3.75pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
-    }
-    {
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]%
+}{%
     \end{itemize}
     \end{minipage}
+}
+
+%----------------------------------------------------------------------------------------
+% BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+\pagestyle{empty}
+
+%----------------------------------------------------------------------------------------
+% HEADER
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Huge \textbf{Aayush Wadhwa}} \\[7.5pt]
+    Chandigarh, India 160014 \\ 
+    \href{mailto:aayuwadhwa@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ 
+    \href{tel:+919517087038}{\raisebox{-0.05\height}\faMobile\ +91-9517087038}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+\textbf{EDI Developer} with strong expertise in healthcare EDI transactions including 837 (Professional, Institutional, Dental), 835, 999, and 277. Proficient in EDI mapping, transformation, and validation across X12, XML, CSV, and JSON formats. Skilled in Edifecs tools (XEServer, SpecBuilder, MapBuilder) with experience in product upgrades, deployments, and production support. Proven ability to collaborate with clients to deliver HIPAA-compliant, accurate, and efficient EDI solutions.
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Professional Experience}
+
+\begin{joblong}{EDI Developer, Edifecs Technologies Pvt. Ltd. (Remote, Mohali, India)}{Jan 2023 -- Present}
+    \item Partnered with clients on the HUMANA project to implement user stories, ensuring HIPAA-compliant EDI solutions tailored to specific customer requirements, with a strong focus on 837 Professional (P), Institutional (I), and Dental (D) transactions.
+    \item Worked extensively on 837 (P/I/D), 835 (Remittance), 999 (Acknowledgment), 277 (Claim Status), and MAO002 reports, covering both validation and troubleshooting in compliance with HIPAA and payer standards.
+    \item Designed, developed, and maintained custom maps using mapping tools for multiple formats including X12, XML, CSV, and JSON, ensuring smooth data transformation and integration across trading partners.
+    \item Contributed to end-to-end project delivery by identifying potential issues early, conducting assessments, and ensuring smooth execution of all phases.
+    \item Created and maintained detailed documentation of mapping logic, workflows, and transaction processing for clear communication with stakeholders.
+    \item Executed upgrades of Edifecs products, ensuring seamless integration, stability, and compliance with system requirements.
+    \item Managed installation, upgrades, and deployments while providing technical direction to network engineers and production support teams.
+\end{joblong}
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}} 	
+2023 & Masters of Computer Applications, \textbf{Chitkara University} \hfill (CGPA: 9.28/10) \\
+2021 & Bachelors of Computer Applications, \textbf{GCCBA-50} \hfill (CGPA: 7.6/10) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+\section{Certifications}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=1em]
+    \item US Healthcare
+    \item EDI Fundamentals
+    \item HIPAA Regulations
+    \item SQL for Data Management
+    \item Groovy Scripting
+    \item XML/JSON Data Handling
+\end{itemize}
+\end{multicols}
+
+\end{document}
