@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 %----------------------------------------------------------------------------------------
 % PACKAGES
@@ -8,7 +8,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage{xcolor}
-\usepackage[scale=0.92]{geometry} % slightly smaller margins
+\usepackage[scale=0.94]{geometry} % slightly tighter margins
 \usepackage{tabularx}
 \usepackage{enumitem}
 \usepackage{multicol}
@@ -26,7 +26,7 @@
 % SECTION FORMATTING
 %----------------------------------------------------------------------------------------
 \titleformat{\section}{\large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{6pt}{4pt} % reduce spacing before/after sections
+\titlespacing{\section}{0pt}{7pt}{10pt} % extra space after section headlines
 
 %----------------------------------------------------------------------------------------
 % JOB LISTING ENVIRONMENT
@@ -36,7 +36,7 @@
         \textbf{#1} & \hfill &  #2 \\
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=2pt,label=--]%
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]%
 }{%
     \end{itemize}
     \end{minipage}
@@ -52,7 +52,7 @@
 % HEADER
 %----------------------------------------------------------------------------------------
 \begin{center}
-    {\Huge \textbf{Aayush Wadhwa}} \\[4pt]
+    {\Huge \textbf{Aayush Wadhwa}} \\[5pt]
     Chandigarh, India 160014 \\
     \href{mailto:aayuwadhwa@gmail.com}{\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ \,
     \href{tel:+919517087038}{\faMobile\ +91-9517087038} \\
