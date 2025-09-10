@@ -24,7 +24,7 @@
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
-% job listing environment (fixed)
+% job listing environment
 \newenvironment{joblong}[2]{%
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
         \textbf{#1} & \hfill &  #2 \\[3.75pt]
@@ -46,8 +46,11 @@
 % HEADER
 %----------------------------------------------------------------------------------------
 \begin{center}
-    {\Huge \textbf{Aayush Wadhwa}} \\[7.5pt]
-    Chandigarh, India 160014 \\ 
+    {\Huge \textbf{Aayush Wadhwa}} \\[5pt]
+    Chandigarh, India 160014
+\end{center}
+
+\begin{center}
     \href{mailto:aayuwadhwa@gmail.com}{\raisebox{-0.05\height}\faEnvelope\ aayuwadhwa@gmail.com} \, $|$ 
     \href{tel:+919517087038}{\raisebox{-0.05\height}\faMobile\ +91-9517087038}
 \end{center}
@@ -86,15 +89,29 @@
 % CERTIFICATIONS
 %----------------------------------------------------------------------------------------
 \section{Certifications}
-\begin{multicols}{2}
+\begin{tabularx}{\linewidth}{@{}X X@{}}
 \begin{itemize}[leftmargin=1em]
     \item US Healthcare
     \item EDI Fundamentals
-    \item HIPAA Regulations
-    \item SQL for Data Management
-    \item Groovy Scripting
-    \item XML/JSON Data Handling
+    \item XEServer Fundamentals
+\end{itemize} &
+\begin{itemize}[leftmargin=1em]
+    \item SpecBuilder Certified Associate
+    \item XEngine Certified Associate
+    \item Python
 \end{itemize}
-\end{multicols}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+EDI & EDI Transactions (837, 835, 999, 277), EDIFACT, HIPAA Compliance \\
+EDI Tools & XEServer, SpecBuilder, MapBuilder \\
+Programming & Groovy, Python, XML, CSV, JSON \\
+Web Servers & Tomcat \\
+Business Analysis & Business Process Analysis, Client Collaboration \\
+\end{tabularx}
 
 \end{document}
